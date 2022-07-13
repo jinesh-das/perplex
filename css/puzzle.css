@@ -1,0 +1,66 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+
+body {
+    /* font-family: 'Segoe UI', Calibri, Arial; */
+    margin:0;
+    /* background-color:  #0c0f38; */
+}
+.navbar-form input {
+    border: none !important;
+}
+.navigation.navbar {
+    float: right;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link {
+    padding: 0 25px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.navigation.navbar-dark .navbar-nav .nav-link:focus,
+.navigation.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fdd430;
+}
+
+.navigation.navbar-dark .navbar-nav .active>.nav-link,
+.navigation.navbar-dark .navbar-nav .nav-link.active,
+.navigation.navbar-dark .navbar-nav .nav-link.show,
+.navigation.navbar-dark .navbar-nav .show>.nav-link {
+    color: #fdd430;
+}
+.header {
+    background: #0c0f38;
+    width: 100%;
+    padding: 40px 40px 40px 40px;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 40px;
+}
+.first{
+    max-width: 70%;
+   margin-left: 0cm;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media  screen and (max-width:600px)
+{
+   #playPanel
+   {
+       margin-left: -85px;
+   }
+    
+}
+

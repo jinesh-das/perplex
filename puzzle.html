@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perplex/puzzle</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon1.ico">
+    <link href="css/puzzle.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/image-puzzle.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+</head>
+
+<body style="background-color: #0c0f38;">
+    <header style="position:sticky; top: 0px; z-index: 1;">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="first" src="images/d.png" alt="#" width="250" height="100"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/about.html"> About </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#service"> Service</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contact">Contact us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/form.html">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="game">
+        <div id="playPanel" style=" margin-left:160px; background-color: whitesmoke;">
+            <h3 id="imgTitle"
+                style=" color:#0c0f38; font-family: Poppins; font-weight: bold; font-size:40px; text-align: center; margin-bottom:25px;">
+            </h3>
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div style="font-family: Poppins; font-size:20px;  color:#0c0f38; font-weight:bold;">Count:
+                        </div>
+                        <div class="stepCount"
+                            style="font-family: Poppins; font-size:20px;  color:#0c0f38; font-weight: bold;">0</div>
+                    </div>
+                    <div id="timeBox" style="font-family: Poppins; font-size:20px;  color:#0c0f38; font-weight: bold;">
+                        Time: <span id="timerPanel"></span> seconds
+                    </div>
+                    <img id="actualImage" />
+                    <div style="font-family:poppins ;">See the picture and solve the puzzle.</div>
+                    <p id="levelPanel">
+                        <input type="radio" class="btn-check" name="lavel" id="easy" value="3" autocomplete="off">
+                        <label class="btn btn-danger" style="width:80px; height: 40px;" for="easy">Easy</label>
+
+                        <input type="radio" class="btn-check" name="lavel" id="medium" value="4" autocomplete="off">
+                        <label class="btn btn-secondary" style="height: 40px;" for="medium">Medium</label>
+
+                        <input type="radio" class="btn-check" name="lavel" id="hard" value="5" autocomplete="off">
+                        <label class="btn btn-success" style="width:74px; height: 40px;" for="hard">Hard</label>
+
+                        <input type="radio" class="btn-check" name="lavel" id="veryhard" value="6" autocomplete="off">
+                        <label class="btn btn-warning" style="width:80px; height: 40px; " for="veryhard">Very
+                            Hard</label>
+                    </p>
+
+                    <div class="ui animated violet button" tabindex="0" id="newPhoto">
+                        <div class="visible content" style="font-family:Poppins;">NEXT</div>
+                        <div class="hidden content">
+                            <i class="right arrow icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;   font-family: poppins;">
+            <div style="background-color: #0c0f38; color: white; padding: 5px 10px 20px 10px; text-align: center;">
+                <h2 style="text-align:center; font-family: poppins; font-weight: bold; ">Game over !!</h2>
+                Congratulations!! <br /> You got the picture ready.
+                <br />
+                Time: <span class="stepCount">0</span> gear.
+                <br />
+                Time spent: <span class="timeCount">0</span> seconds<br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);">Play more</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var images = [
+                { src: 'img/neeruti.jpg', title: 'Neeruti manor' },
+                { src: 'img/harju_madise.jpg', title: 'Harju-Madis Church' },
+                { src: 'img/rahumae.jpg', title: 'Rahumäe train station' },
+                { src: 'img/kakumae.jpg', title: 'Kakumäe Harbor' },
+                { src: 'img/kgf.jpg', title: 'KGF' },
+                { src: 'img/kohila.jpg', title: 'Kohila mill' },
+                { src: 'img/dr.strange.jpeg', title: 'Dr.STRANGE in the MULTIVERSE of MADNESS' },
+                { src: 'img/dr.strange2.jpg', title: 'Dr.Strange' },
+                { src: 'img/Thor.jpg', title: 'THOR LOVE & THUNDER' },
+                { src: 'img/doremoon.jpg', title: 'DOREMOON' },
+                { src: 'img/harry.jpg', title: 'HARRY POTTER' },
+                { src: 'img/harry1.jpg', title: 'HARRY POTTER' },
+                { src: 'img/linnahall.jpg', title: 'Linnahall' },
+                { src: 'img/b.jpg', title: 'Tortoise' },
+                { src: 'img/c.jpg', title: 'Linnahall' },
+                { src: 'img/a.jpg', title: 'Rhinoceros' },
+                { src: 'img/konarka_Temple.jpg', title: 'Konarka Temple, India' },
+                { src: 'img/JERRY.jpg', title: 'TOM & JERRY' },
+                { src: 'img/Tower_Bridge.jpg', title: 'Tower Bridge, London, United Kingdom' },
+                { src: 'img/Tower_Bridge2.jpg', title: 'Tower Bridge, London, United Kingdom' },
+                { src: 'img/Taj_Mahal.jpg', title: 'Taj Mahal, India' },
+                { src: 'img/Eiffel_Tower.jpg', title: 'Eiffel Tower, Paris, France' },
+                { src: 'img/Mount_Rushmore.jpg', title: 'Mount Rushmore, USA' },
+                { src: 'img/Paris.jpg', title: 'Paris, France' }
+
+
+            ];
+
+            $(function () {
+                var gridSize = $('#levelPanel :radio:checked').val();
+                imagePuzzle.startGame(images, gridSize);
+                $('#newPhoto').click(function () {
+                    var gridSize = $('#levelPanel :radio:checked').val();
+                    imagePuzzle.startGame(images, gridSize);
+                });
+
+                $('#levelPanel :radio').change(function (e) {
+                    var gridSize = $(this).val();
+                    imagePuzzle.startGame(images, gridSize);
+                });
+            });
+            function rules() {
+                alert('Rearrange the pieces so that you get a sample image. \nThe steps taken are counted');
+            }
+        </script>
+    </div>
+</body>
+
+</html>

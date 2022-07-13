@@ -1,0 +1,81 @@
+﻿.game hr{
+    border:none;
+    border-top:2px solid #f5f2f2;
+    height:1px;
+}
+
+.game #playPanel {
+    background-color:#c2defc;
+    padding:40px 0px; 
+    margin: 10px auto;
+    max-width:1150px;
+    width:100%;
+    display: inline-block;
+}
+
+.game #actualImageBox {
+    display: inline-block;
+    font-size:0.8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:190px;
+    vertical-align: top;
+    width:320px;
+}
+
+.game #stepBox, #game #timeBox {
+    display:inline-block;
+    width:48%;
+}
+
+.game #stepBox div {
+    background-color:white;
+    display:inline-block;
+    padding:1px 4px;
+    margin: 0px auto;
+    max-width:800px;
+}
+
+#game img#actualImage{
+    border:2px solid #a46;
+    height:280px;
+    width:280px;
+}
+
+.game #sortable {
+    border:2px solid #a46;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 50px;
+    margin-left:100px;
+    padding: 0;
+    width: 404px;
+}
+.game #sortable li {
+    cursor: pointer;
+    margin: 0;
+    border: none;
+    padding: 0;
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size : 400% 400%;
+}
+  
+
+.game #newPhoto  {
+    width:200px;
+    height: 60px; 
+    margin-left:40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-radius:16px;
+    font-family: Poppins;
+    /* background-color: #0c0f38; */
+}
+#levelPanel
+{
+    margin-bottom:5px;
+}

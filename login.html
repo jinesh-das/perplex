@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perplex/log in</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon1.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+            --lg-lightcolor: linear-gradient(to left,
+                    rgba(116, 235, 213, 0.6),
+                    rgba(159, 172, 230, 0.6));
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            background-image: var(--lg-lightcolor), url(/images/close-up-puzzle-background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* width: 100vw; */
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2.8px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: calc(100vw - 55vw);
+            max-width: 100%;
+        }
+
+        .header {
+            border-bottom: 1px solid #f0f0f0;
+            background: var(--lg-color);
+            padding: 20px 40px;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #222;
+            font-family: "Open Sans", sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .form {
+            padding: 30px 40px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input {
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .form-control input:focus {
+            outline: 0;
+            border-color: #777;
+        }
+
+        .form button {
+            background: var(--lg-color);
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            color: #fff;
+            display: block;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 15px 0;
+            margin-top: 20px;
+            width: 100%;
+            text-transform: uppercase;
+            transition: all 1s ease;
+        }
+
+        .form button:hover {
+            background: linear-gradient(to right, #74eb8d, #9face6);
+        }
+
+        @media screen and (max-width: 480px) {
+            .social-panel-container.visible {
+                transform: translateX(0px);
+            }
+        }
+
+        #username {
+            color: red;
+        }
+
+        #passwords {
+            color: red;
+        }
+
+        #confrmpass {
+            color: red;
+        }
+
+        #mobileno {
+            color: red;
+        }
+
+        #emailids {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Log In</h2>
+        </div>
+        <form id="form" class="form" action="/puzzle.html" onsubmit="return validation()">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter user id" id="user">
+                <span id="username"></span>
+            </div>
+            <div class="form-control">
+                <label for="username">Password</label>
+                <input type="password" placeholder="Password" id="pass">
+                <span id="passwords"></span>
+            </div>
+            <a href="#" style="text-decoration: none; position: relative; top:-17px">Forgot Password</a>
+            <button>Register</button>
+        </form>
+    </div>
+
+   
+
+</body>
+
+</html>
